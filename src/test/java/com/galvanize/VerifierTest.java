@@ -14,14 +14,14 @@ public class VerifierTest {
 	@Test
 	public void verifierTooShort_ThrowIFE() {
 		assertThrows(InvalidFormatException.class, () -> verifier.verify("321"));
-	};
+	}
 	@Test
 	public void verifierTooLong_ThrowIFE() {
 		assertThrows(InvalidFormatException.class, () -> verifier.verify("2345678"));
-	};
+	}
 	@Test
 	public void verifierNoService_ThrowNSE() {
 		assertThrows(NoServiceException.class, () -> verifier.verify("11234"));
-	};
+	}
 
 }
